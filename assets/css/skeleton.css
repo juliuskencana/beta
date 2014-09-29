@@ -1,0 +1,228 @@
+
+
+a img:hover {
+	opacity: .7;
+}
+
+.btn-default i {
+	color: #25ad9f;
+}
+
+.btn-default {
+color: #444;
+border-color: #e7e7e7;
+background: #efefef;
+}
+
+.strong {
+	font-weight: bold;
+}
+
+.btn-primary {
+	background: #25ad9f;
+	border-color: #25ad9f;
+	color: #fff;
+}
+
+.btn-primary:hover {
+	background: #29BBAC;
+	border-color: #29BBAC;
+	color: #fff;
+}
+
+.btn-block {
+	width: 100%;
+	min-height: 30px;
+}
+
+
+.innerB {
+	padding-bottom: 10px;
+	position: relative;
+}
+
+.innerT {
+	padding-top: 10px;
+	position: relative;
+}
+
+.innerAll {
+	padding: 10px;
+	position: relative;
+}
+
+.innerTB {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	position: relative;
+}
+
+.text-center {
+	text-align: center !important;
+}
+
+.padding-none {
+	padding: 0 !important;
+}
+
+.margin-none {
+	margin: 0 !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	color: #4d4d4d;
+}
+
+.text-muted {
+	color: #cacaca;
+}
+
+.display-block {
+	display: block !important;
+}
+
+.text-small {
+	font-size: 12px;
+}
+
+.clearfix:before,
+
+.clearfix:after {
+
+   content: "."; 
+
+   visibility: hidden; 
+
+   display: block; 
+
+   height: 0; 
+
+   clear: both;
+
+}
+
+.clearfix:after {
+
+    clear:both;
+
+}
+/* For IE 6/7 (trigger hasLayout) */
+
+.clearfix {
+
+    zoom:1;
+
+}
+
+.inline-block {
+display: inline-block !important;
+}
+
+input[type=text], input[type=password], select, textarea {
+border-color: #efefef;
+}
+
+select, textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"], .uneditable-input {
+	font-size: 13px;
+	box-shadow: none !important;
+	-moz-box-shadow: none !important;
+	-webkit-box-shadow: none !important;
+	-webkit-border-radius: 0 0 0 0;
+	-moz-border-radius: 0 0 0 0;
+	border-radius: 0 0 0 0;
+	border-color: #efefef;
+}
+
+.form-control {
+	border-color: #efefef;
+	box-shadow: none;
+	height: auto;
+}
+
+.form-control {
+	display: block;
+	width: 100%;
+	height: 34px;
+	padding: 6px 12px;
+	font-size: 14px;
+	line-height: 1.42857143;
+	color: #555;
+	background-color: #fff;
+	background-image: none;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+	box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+	-webkit-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+	transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+
+label, input, button, select, textarea {
+	font-size: 13px;
+}
+
+input, button, select, textarea {
+	font-family: inherit;
+	font-size: inherit;
+	line-height: inherit;
+}
+
+input {
+	line-height: normal;
+}
+
+button, input, optgroup, select, textarea {
+	color: inherit;
+	font: inherit;
+	margin: 0;
+}
+
+a.text-inverse {
+	color: #424242;
+	outline: 0 !important;
+}
+
+.bg-primary {
+	background: #25ad9f !important;
+	color: #fff;
+}
+
+.text-white {
+	color: #fff;
+}
+
+a:hover {
+	color: #333;
+}
+
+.lead {
+	margin: 0 0 10px;
+}
+
+.display-block-inline {
+	display: inline-block !important;
+}
+
+*, a:focus {
+	outline: none !important;
+}
+
+.text-primary {
+	color: #25ad9f !important;
+}
+
+.bg-white {
+background: #fff !important;
+}
+
+.border-bottom {
+border-bottom: 1px solid #efefef !important;
+}
+
+.border-top {
+border-top: 1px solid #efefef;
+}
+
+.label {
+display: inline-block;
+}
