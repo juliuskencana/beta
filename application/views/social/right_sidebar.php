@@ -2,7 +2,13 @@
 <!-- Profile -->
 <div class="widget">
     <div class="widget-body text-center">
-        <a href=""><img src="<?= base_url('assets/img/profile_picture.jpg'); ?>" width="120" alt="" class="profile-picture" ></a>
+        <a href="">
+			<?php if ($user->profile_photo == null){ ?>
+				<img src="<?= assets_url('img/avatar.jpg'); ?>" class="profile-picture">
+			<?php }else{ ?>
+				<img src="<?= storage_url('avatar/' . $user->profile_photo); ?>" class="profile-picture">
+			<?php } ?>
+		</a>
         <h2 class="strong margin-none"><?= $user->full_name ?></h2>
         <div class="innerB"><?= $user->country . ', ' . $user->city; ?></div>
         <div class="btn-group-vertical btn-block">

@@ -1,6 +1,10 @@
 <div class="cover">
 	<div class="top">
-		<img src="<?= base_url('assets/img/cover.jpg'); ?>" class="img-responsive">					
+		<?php if ($user->cover_photo == null){ ?>
+			<img src="<?= assets_url('img/cover.jpg'); ?>" class="img-responsive">
+		<?php }else{ ?>
+			<img src="<?= storage_url('cover/' . $user->cover_photo); ?>" class="img-responsive">
+		<?php } ?>			
 	</div>
 	<ul class="list-unstyled">
 		<li <?php if($this->uri->segment(2) == "news_feed"){echo " class='active'";} ?>><a href="<?= base_url('social/news_feed'); ?>"><i class="fa fa-fw fa-pencil"></i> <span>News feed</span></a></li>

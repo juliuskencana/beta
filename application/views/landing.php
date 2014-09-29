@@ -1,4 +1,4 @@
-<!doctype html>
+<!-- <!doctype html> -->
 <html lang="en">
 <head>
 
@@ -7,7 +7,7 @@
 	<title>Social Media and Marketplace</title>
     <meta name="description" content="Social Media and Marketplace">
     <meta name="keywords" content="Social Media and Marketplace">
-    <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700' rel='stylesheet' type='text/css'>
+    <!-- <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700' rel='stylesheet' type='text/css'> -->
     <link rel="stylesheet" href="<?= assets_url('css/bootstrap.min.css'); ?>" type="text/css" media="all" />
     <link rel="stylesheet" href="<?= assets_url('css/font-awesome.min.css'); ?>" type="text/css" media="all" />
     <link rel="stylesheet" href="<?= assets_url('css/font-lineicons.css'); ?>" type="text/css" media="all" />
@@ -37,8 +37,10 @@
                 </div>
                 <div class="navigation-navbar">
                     <ul class="navigation-bar navigation-bar-right">
-                        <li><a href="<?= base_url('social/news_feed'); ?>">Social Media</a></li>
+                        <li><a href="<?= base_url('social/outfit'); ?>">Social Media</a></li>
                         <li><a href="#">Marketplace</a></li>
+                        <li><a href="<?= base_url('social/auth'); ?>">Sign up</a></li>
+                        <li><a href="<?= base_url('social/auth'); ?>">Sign in</a></li>
                     </ul>
                 </div>
             </div>
@@ -55,7 +57,7 @@
 		<div class="container">
 			<div class="signup-wrapper animated hiding" data-animation="bounceInUp" data-delay="0">
 				<div class="row">
-						<form class="form-inline form-register form-register-small" method="post" action="<?= base_url('social/auth'); ?>">
+						<form class="form-inline form-register form-register-small" method="post" action="">
 						
 							<div class="form-group">
 								<input size="30" type="text" class="form-control" name="fullname" placeholder="Full name">
