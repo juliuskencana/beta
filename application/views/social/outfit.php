@@ -1,4 +1,3 @@
-<?php include 'header.php'; ?>
 <div class="container" style="padding-top: 68px;">
 
 	<!-- Profile Content  -->
@@ -196,4 +195,3 @@
 	</div>
 
 </div>
-<?php include 'footer.php'; ?>
