@@ -4,6 +4,10 @@ body {
 	color: #797979;
 }
 
+.dark{
+	color: #4d4d4d;
+}
+
 .navbar-static-top {
   margin-bottom: 19px;
 }
@@ -46,11 +50,11 @@ body {
 
 .timeline-cover .cover ul {
 	position: absolute;
-	overflow: hidden;
+	/*overflow: hidden;*/
 	float: left;
 	bottom: 0;
 	width: 100%;
-	padding: 0;
+	padding-left: 19%;
 	background: rgba(0,0,0,0.24);
 }
 
@@ -66,7 +70,7 @@ ul.list-unstyled {
 
 .timeline-cover .cover ul li {
 	display: block;
-	float: left;
+	float: right;
 	margin-right: 0;
 	padding: 0 10px;
 	line-height: 40px;
@@ -83,6 +87,7 @@ a:hover, a:hover .text-underline {
 	display: block;
 	height: 40px;
 	line-height: 40px;
+	font-size: 12px;
 }
 
 .widget {
@@ -189,6 +194,22 @@ margin-top: 12px;
 
 .update-status input[type="submit"]{
 	padding: 8px 30px 8px 30px;
+}
+
+.ootd textarea{
+	margin: 0px;
+	padding: 10px;
+	height: 106px;
+	width: 102%;
+	max-width: 102%;
+}
+
+.selfie textarea{
+	margin: 0px;
+	padding: 10px;
+	height: 106px;
+	width: 102%;
+	max-width: 102%;
 }
 
 .img-post{
@@ -445,4 +466,35 @@ div.row, ul.row {
 .btn-file {
 	position: relative;
 	overflow: hidden;
+}
+
+.modal-header{
+	background: #25ad9f !important;
+}
+
+.modal-title{
+	color: #fff;
+}
+
+.close{
+	color: #FFF;
+}
+
+.profile-photo-cover{
+	position: absolute;
+	left: 0;
+	top: -120px;
+	margin-left: 2%;
+	border: 4px solid #f6f6f6;
+	height: 138px;
+	width: 139px;
+	overflow: hidden;
+}
+
+.profile-photo-cover a img:hover {
+	opacity: 1 !important;
+}
+
+.profile-photo-cover img{
+height: 200px
 }

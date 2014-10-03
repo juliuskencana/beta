@@ -39,6 +39,13 @@
 */
 
 $route['default_controller'] = "landing";
+$route['social/follower/follow/(:any)'] = 'social/follower/follow/$1';
+$route['social/follower/unfollow/(:any)'] = 'social/follower/unfollow/$1';
+$route['social/follower/(:any)'] = 'social/follower/index/$1';
+$route['social/following/(:any)'] = 'social/following/index/$1';
+$route['social/outfit/(:any)'] = 'social/outfit/index/$1';
+$route['social/news_feed/(:any)'] = 'social/news_feed/index/$1';
+$route['social/selfie/(:any)'] = 'social/selfie/index/$1';
 $route['404_override'] = '';
 
 

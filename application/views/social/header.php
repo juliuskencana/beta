@@ -23,7 +23,7 @@
 			</div>
 			<div class="navbar-collapse collapse">
 				<ul class="nav navbar-nav">
-					<li class="social-media-menu-top"><a href="<?= base_url('social/news_feed'); ?>">Social Media</a></li>
+					<li class="social-media-menu-top"><a href="<?= base_url('social/news_feed/'.$this->session->userdata('username')); ?>">Social Media</a></li>
 					<li><a href="#about">Marketplace</a></li>
 				</ul>
 

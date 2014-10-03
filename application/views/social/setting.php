@@ -22,17 +22,7 @@
 		        <?php } ?>
 				<div class="widget-body">
 					<!-- Tabs -->
-					<div class="tabsbar-setting">
-						<ul>
-							<li class="active"><a href="">Profile</a></li>
-							<!-- <li><a href="">Security and privacy</a></li> -->
-							<li><a href="">Password</a></li>
-							<li><a href="">Web Notifications</a></li>
-							<li><a href="">Email Notifications</a></li>
-							<li><a href="">Muted Accounts</a></li>
-							<li><a href="">Design</a></li>
-						</ul>
-					</div>
+					<?= $this->load->view('social/setting_tabs'); ?>
 					<!-- // Tabs END -->
 					
 					<div class="gallery">
@@ -134,6 +124,20 @@
 										    <div class="col-sm-10">
 												<?php echo form_error('website'); ?>
 										      	<input type="text" class="form-control" name="website" placeholder="Website" value="<?= $user->website ?>">
+										    </div>
+									  	</div>
+									  	<div class="form-group <?php if(form_error('facebook')){echo "has-error";} ?>">
+										    <label class="col-sm-2 control-label">Facebook</label>
+										    <div class="col-sm-10">
+												<?php echo form_error('facebook'); ?>
+										      	<input type="text" class="form-control" name="facebook" placeholder="Facebook" value="<?= $user->facebook ?>">
+										    </div>
+									  	</div>
+									  	<div class="form-group <?php if(form_error('twitter')){echo "has-error";} ?>">
+										    <label class="col-sm-2 control-label">Twitter</label>
+										    <div class="col-sm-10">
+												<?php echo form_error('twitter'); ?>
+										      	<input type="text" class="form-control" name="twitter" placeholder="Twitter" value="<?= $user->twitter ?>">
 										    </div>
 									  	</div>
 									  	<div class="form-group <?php if(form_error('quote')){echo "has-error";} ?>">

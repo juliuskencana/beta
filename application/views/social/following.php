@@ -12,7 +12,7 @@
 				<div class="input-group-btn"><button class="btn btn-default" type="button"><i class="fa fa-search"></i></button></div>
 			</div>
 			<div class="row row-merge">
-				<?php foreach ($follower as $row): ?>
+				<?php foreach ($following as $row): ?>
 					<div class="col-md-12 col-lg-6 bg-white border-bottom">
 						<div class="row">
 							<div class="col-sm-9">

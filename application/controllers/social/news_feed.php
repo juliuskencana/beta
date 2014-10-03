@@ -13,12 +13,17 @@ class News_feed extends CI_Controller {
 		$this->load->model('user_model');
     }
     
-	public function index()
+	public function index($username)
 	{
-		$data['user'] = $this->user_model->get_user_by_user_id($this->session->userdata('user_id'));
-		$this->load->view('social/header', $data);
-		$this->load->view('social/news_feed');
-		$this->load->view('social/footer');
+		if ($username != $this->session->userdata('username')) {
+			show_404('page', ['log_error']);
+		}else{
+			$data['user_id'] = $this->user_model->get_user_by_username($username);
+			$data['user'] = $this->user_model->get_user_by_user_id($this->session->userdata('user_id'));
+			$this->load->view('social/header', $data);
+			$this->load->view('social/news_feed');
+			$this->load->view('social/footer');
+		}
 	}
 }
 

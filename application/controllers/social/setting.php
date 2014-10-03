@@ -17,16 +17,12 @@ class Setting extends CI_Controller {
 	{
 		$data['error'] = false;
 		$data['user'] = $this->user_model->get_user_by_user_id($this->session->userdata('user_id'));
+		$data['user_id'] = $this->user_model->get_user_by_username($this->session->userdata('username'));
 		if ($this->input->post()) {
 			$post = $this->input->post();
 			$this->form_validation->set_rules('username', 'Username', 'required');
 			$this->form_validation->set_rules('email', 'email', 'required|valid_email');
 			$this->form_validation->set_rules('name', 'name', 'required');
-			$this->form_validation->set_rules('gender', 'gender', 'required');
-			$this->form_validation->set_rules('country', 'country', 'required');
-			$this->form_validation->set_rules('city', 'city', 'required');
-			$this->form_validation->set_rules('website', 'website', 'required');
-			$this->form_validation->set_rules('quote', 'quote', 'required');
 			
 			$this->form_validation->set_message('required', 'Can not be empty');
 				$this->form_validation->set_message('valid_email', 'must be a valid email');
@@ -102,9 +98,11 @@ class Setting extends CI_Controller {
 			}
 			else
 			{
-				$old_pp = 'storage/avatar/' . $user->profile_photo;
-				if (!empty($old_pp)) {
-					unlink($old_pp);
+				if ($user->profile_photo != NULL) {
+					$old_pp = 'storage/avatar/' . $user->profile_photo;
+					if (!empty($old_pp)) {
+						unlink($old_pp);
+					}
 				}
 
 				$upload_data = $this->upload->data();
@@ -126,9 +124,11 @@ class Setting extends CI_Controller {
 			}
 			else
 			{
-				$old_pp = 'storage/cover/' . $user->cover_photo;
-				if (!empty($old_pp)) {
-					unlink($old_pp);
+				if ($user->cover_photo != NULL) {
+					$old_pp = 'storage/cover/' . $user->cover_photo;
+					if (!empty($old_pp)) {
+						unlink($old_pp);
+					}
 				}
 
 				$upload_data = $this->upload->data();
@@ -137,6 +137,56 @@ class Setting extends CI_Controller {
 				redirect(site_url('social/setting'));
 			}
 		}
+	}
+
+	public function password()
+	{
+		$data['user_id'] = $this->user_model->get_user_by_username($this->session->userdata('username'));
+		$data['error'] = false;
+		$data['user'] = $this->user_model->get_user_by_user_id($this->session->userdata('user_id'));
+		if ($this->input->post()) {
+			$post = $this->input->post();
+			$this->form_validation->set_rules('opass', 'Old Password', 'required');
+			$this->form_validation->set_rules('npass', 'New Password', 'required|min_length[5]');
+			$this->form_validation->set_rules('cpass', 'Confirm New Password', 'required|matches[npass]');
+			
+			$this->form_validation->set_message('required', 'Can not be empty');
+			$this->form_validation->set_error_delimiters('<label class="control-label">', '</label>');
+
+			if ($this->form_validation->run() == FALSE) 
+			{
+            	$data['error'] = true;
+			}
+			else
+			{
+				if (sha1($post['opass']) == $data['user']->password) {
+					$this->user_model->change_password($this->session->userdata('user_id'), $post);
+					
+					$this->session->set_flashdata('success', 'success');
+					redirect(site_url('social/setting/password'));
+				}else{
+            		$data['error'] = true;
+            		$data['error_opass'] = true;
+				}
+			}
+		}
+		$this->load->view('social/header', $data);
+		$this->load->view('social/setting_password');
+		$this->load->view('social/footer');
+	}
+
+	public function email_notification()
+	{
+		$data['user'] = $this->user_model->get_user_by_user_id($this->session->userdata('user_id'));
+		$data['user_id'] = $this->user_model->get_user_by_username($this->session->userdata('username'));
+		// if ($this->input->post()) {
+		// 	$post = $this->input->post();
+		// 	var_dump($post);
+		// 	$this->user_model->email_notification($this->session->userdata('user_id'), $post);
+		// }
+		$this->load->view('social/header', $data);
+		$this->load->view('social/email_notification');
+		$this->load->view('social/footer');
 	}
 }
 

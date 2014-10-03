@@ -29,6 +29,17 @@ background: #efefef;
 	border-color: #29BBAC;
 	color: #fff;
 }
+.btn-followed {
+	background: #f06f6f;
+	border-color: #f06f6f;
+	color: #fff;
+}
+
+.btn-followed:hover {
+	background: #ed5353;
+	border-color: #ed5353;
+	color: #fff;
+}
 
 .btn-block {
 	width: 100%;
@@ -63,6 +74,10 @@ background: #efefef;
 
 .padding-none {
 	padding: 0 !important;
+}
+
+#left-margin-none {
+	margin-left: 0 !important;
 }
 
 .margin-none {

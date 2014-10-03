@@ -25,7 +25,7 @@
 					<hr>
 					<form role="form"  action="" method="post">
 						<div class="form-group clearfix <?php if(form_error('username')){echo "has-error";} ?>">
-							<label class="col-sm-2 control-label">Name</label>
+							<label class="col-sm-2 control-label">Username</label>
 							<div class="col-sm-10">
 								<?php echo form_error('username'); ?>
 								<input type="text" class="form-control" placeholder="Username" name="username" value="<?= set_value('username') ?>">

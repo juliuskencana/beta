@@ -16,3 +16,23 @@ var container = document.querySelector('#container');
 	$('#cover').change(function(){
 		$('#upload').submit();
 	});
+
+	$("#alert").hide();
+	$('#ootd-post').click(function(){
+		var photo = $('#photo-ootd').val();
+		if (photo == "") {
+			$("#alert").show();
+		}else{
+			$('#upload-ootd').submit();
+		};
+	});
+
+	$("#alert-selfie").hide();
+	$('#selfie-post').click(function(){
+		var photo = $('#photo-selfie').val();
+		if (photo == "") {
+			$("#alert-selfie").show();
+		}else{
+			$('#upload-selfie').submit();
+		};
+	});

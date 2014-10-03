@@ -7,6 +7,7 @@ class Auth extends CI_Controller {
         parent::__construct();
 
 		$this->load->model('user_model');
+		$this->load->model('email');
     }
 
 	public function index()
@@ -32,11 +33,12 @@ class Auth extends CI_Controller {
 					if ($check_login != false) {
 						$session = array(
 							'user_id'  => $check_login->social_user_id,
+							'username'  => $check_login->username,
 							'logged_in' => TRUE
 						);
 
 						$this->session->set_userdata($session);
-						redirect(base_url('social/news_feed'));
+						redirect(base_url('social/news_feed/'.$check_login->username));
 					}else {
 		                $this->session->set_flashdata('error', 'Error');
 		                redirect(base_url('social/auth'));
@@ -68,7 +70,38 @@ class Auth extends CI_Controller {
 	            		$data['error_email'] = true;
 					}else{
 						$this->user_model->signup($post);
-						// send mail
+
+						$user_id = $this->db->insert_id();
+						$activation_token = $this->user_model->get_user_by_user_id($user_id);
+
+						// SEND MAIL HERE
+						$sendmail_msg = '
+						<div>
+							Welcome, a social media that allows you to post your photo!
+						</div>
+						<br>
+						<div>
+							Thanks for registering. Before you start, we need you to confirm you email address validation.
+						</div>
+						<br>
+						<div style="text-align:center">
+							Copy this ' . site_url() . 'social/auth/activation_member/' . $activation_token->activation_hash . ' on your browser
+						</div>
+						<br>
+						<br>
+						<div>
+						Sincerely,
+						</div>
+						<br>
+						<div>
+						Team
+						</div>
+						';
+						
+						$sendmail_to = $post['email_s'];
+						$sendmail_subject = 'Please Confirm Your Registration';
+						$this->email->send_mail($sendmail_to, $sendmail_subject, $sendmail_msg);
+
 		                redirect(base_url('social/auth/activation_page'));
 					}
 				}
@@ -88,12 +121,13 @@ class Auth extends CI_Controller {
 
 	public function activation_page()
 	{
-		echo "Please activate your account";
+		echo "Please activate your account, check your email";
 	}
 
 	public function activation_member($hash)
 	{
 		$this->user_model->activating_member($hash);
+		echo "Thanks to activated your account, click <a href='".base_url('social/auth')."'>here</a> to back to login page";
 	}
 }
 

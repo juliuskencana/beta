@@ -1,6 +1,6 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Outfit extends CI_Controller {
+class Selfie extends CI_Controller {
 
 	public function __construct()
     {
@@ -11,17 +11,17 @@ class Outfit extends CI_Controller {
 		}
 
 		$this->load->model('user_model');
-		$this->load->model('ootd_model');
+		$this->load->model('selfie_model');
     }
     
 	public function index($username)
 	{
-		$data['user'] = $this->user_model->get_user_by_user_id($this->session->userdata('user_id'));
 		$data['user_id'] = $this->user_model->get_user_by_username($username);
-		$data['ootd'] = $this->ootd_model->get_ootd_by_user_id($data['user_id']->social_user_id);
+		$data['user'] = $this->user_model->get_user_by_user_id($this->session->userdata('user_id'));
+		$data['selfie'] = $this->selfie_model->get_selfie_by_user_id($data['user_id']->social_user_id);
 		if (isset($_FILES['photo']['name'])) {
 			$post = $this->input->post();
-			$config['upload_path'] = './storage/ootd';
+			$config['upload_path'] = './storage/selfie';
 			$config['allowed_types'] = 'gif|jpg|png';
 			$config['encrypt_name'] = TRUE;
 
@@ -30,18 +30,18 @@ class Outfit extends CI_Controller {
 			if ( ! $this->upload->do_upload('photo'))
 			{
 				$this->session->set_flashdata('error_upload', 'error');
-				redirect(site_url('social/outfit/'.$username));
+				redirect(site_url('social/selfie/'.$username));
 			}
 			else
 			{
 				$upload_data = $this->upload->data();
-				$this->ootd_model->upload_ootd($this->session->userdata('user_id'), $upload_data, $post);
+				$this->selfie_model->upload_selfie($this->session->userdata('user_id'), $upload_data, $post);
 
-				redirect(site_url('social/outfit/'.$username));
+				redirect(site_url('social/selfie/'.$username));
 			}
 		}
 		$this->load->view('social/header', $data);
-		$this->load->view('social/outfit');
+		$this->load->view('social/selfie');
 		$this->load->view('social/footer');
 	}
 }
