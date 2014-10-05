@@ -38,7 +38,7 @@ class Auth extends CI_Controller {
 						);
 
 						$this->session->set_userdata($session);
-						redirect(base_url('social/news_feed/'.$check_login->username));
+						redirect(base_url('social/feed/'.$check_login->username));
 					}else {
 		                $this->session->set_flashdata('error', 'Error');
 		                redirect(base_url('social/auth'));

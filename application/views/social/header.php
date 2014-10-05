@@ -23,7 +23,7 @@
 			</div>
 			<div class="navbar-collapse collapse">
 				<ul class="nav navbar-nav">
-					<li class="social-media-menu-top"><a href="<?= base_url('social/news_feed/'.$this->session->userdata('username')); ?>">Social Media</a></li>
+					<li class="social-media-menu-top"><a href="<?= base_url('social/feed/'.$this->session->userdata('username')); ?>">Social Media</a></li>
 					<li><a href="#about">Marketplace</a></li>
 				</ul>
 
@@ -36,8 +36,71 @@
 
 				<ul class="nav navbar-nav navbar-right">
 					<?php if ($this->session->userdata('logged_in') == TRUE){ ?>
+						<li class="dropdown notification">
+						    <a class="padding-none my-tooltip my-dropdown" data-toggle="dropdown" href="#" title="Notification">
+								<span class="media-small">Notification</span>
+								<img src="<?= assets_url('img/notif.png') ?>" alt="" class="notif-logo">
+								<span class="notif-count">2</span>
+						    </a>
+						    <ul class="dropdown-menu notification-menu" role="menu" aria-labelledby="dLabel">
+					    		<h6 class="innerAll margin-none border-bottom">Notification</h6>
+					    		<div class="widget-body padding-none">
+									<li class="media border-bottom innerAll margin-none">
+										<?php if ($user->profile_photo == null){ ?>
+											<img src="<?= assets_url('img/avatar.jpg'); ?>" class="pull-left media-object profile-picture">
+										<?php }else{ ?>
+											<img src="<?= storage_url('avatar/' . $user->profile_photo); ?>" class="pull-left media-object profile-picture">
+										<?php } ?>
+										<div class="media-body">
+											<span>
+									            <a href="#" class="strong">Julius Kencana</a>
+								            	like your selfie
+								            </span>
+								            <small class="display-block">
+								            	Yesterday, at 15:25
+								            </small>
+								        </div>
+									</li>
+									<li class="media border-bottom innerAll margin-none">
+										<?php if ($user->profile_photo == null){ ?>
+											<img src="<?= assets_url('img/avatar.jpg'); ?>" class="pull-left media-object profile-picture">
+										<?php }else{ ?>
+											<img src="<?= storage_url('avatar/' . $user->profile_photo); ?>" class="pull-left media-object profile-picture">
+										<?php } ?>
+										<div class="media-body">
+											<span>
+									            <a href="#" class="strong">Julius Kencana</a>
+								            	like your selfie
+								            </span>
+								            <small class="display-block">
+								            	Yesterday, at 15:25
+								            </small>
+								        </div>
+									</li>
+									<li class="media border-bottom innerAll margin-none">
+										<?php if ($user->profile_photo == null){ ?>
+											<img src="<?= assets_url('img/avatar.jpg'); ?>" class="pull-left media-object profile-picture">
+										<?php }else{ ?>
+											<img src="<?= storage_url('avatar/' . $user->profile_photo); ?>" class="pull-left media-object profile-picture">
+										<?php } ?>
+										<div class="media-body">
+											<span>
+									            <a href="#" class="strong">Julius Kencana</a>
+								            	like your selfie
+								            </span>
+								            <small class="display-block">
+								            	Yesterday, at 15:25
+								            </small>
+								        </div>
+									</li>
+									<li class="media innerAll margin-none text-center shadow-top">
+										<a href="#">See All</a>
+									</li>
+								</div>
+						    </ul>
+						</li>
 						<li>
-							<a href="<?= base_url('social/setting') ?>" class="dropdown-toggle">welcome back, <?= $user->username ?></a>
+							<a href="<?= base_url('social/setting') ?>">welcome back, <?= $user->username ?></a>
 						</li>
 					<?php }else{ ?>
 						<li class="innerLR">

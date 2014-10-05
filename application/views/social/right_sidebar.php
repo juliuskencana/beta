@@ -49,3 +49,278 @@
 		</div>
 	<?php endforeach ?>
 </div>
+
+
+<div class="widget">
+	<!-- Nav tabs -->
+	<ul class="nav nav-tabs bg-gray" role="tablist">
+	  <li class="active"><a href="#home" role="tab" data-toggle="tab">Most like selfie</a></li>
+	  <li><a href="#profile" role="tab" data-toggle="tab">Most like ootd</a></li>
+	</ul>
+
+	<!-- Tab panes -->
+	<div class="tab-content">
+	    <div class="tab-pane active" id="home">
+			<div class="widget-body padding-none">
+				<div class="media border-bottom innerAll margin-none">
+					<div class="most-like last-most-like">
+						<div class="bg-primary">
+							<div class="media margin-none">
+						        <a href="<?= base_url('social/selfie/' . $user->username) ?>" class="pull-left innerAll">
+									<?php if ($user->profile_photo == null){ ?>
+										<img src="<?= assets_url('img/avatar.jpg'); ?>" width="50" class="profile-picture media-object" >
+									<?php }else{ ?>
+										<img src="<?= storage_url('avatar/' . $user->profile_photo); ?>"  width="50" class="profile-picture media-object" >
+									<?php } ?>	
+						        </a>
+						        <div class="media-body innerTB">
+						            <a href="#" class="text-white strong display-block">Julius Kencana</a>
+						            <a href="#" id="like" data-content="selfie" class="text-small text-white">
+						            	Like 
+						            </a>
+						            <a href="#" class="text-small text-white">
+						            	<span>(10)</span>
+						            </a>
+						        </div>
+						    </div>
+					    </div>
+					    <div>
+					        <a href="#"><img src="<?= assets_url('img/2.jpg'); ?>" alt="" class="img-outfit display-block-inline"></a>
+					    </div>
+					</div>
+					<div class="most-like last-most-like">
+						<div class="bg-primary">
+							<div class="media margin-none">
+						        <a href="<?= base_url('social/selfie/' . $user->username) ?>" class="pull-left innerAll">
+									<?php if ($user->profile_photo == null){ ?>
+										<img src="<?= assets_url('img/avatar.jpg'); ?>" width="50" class="profile-picture media-object" >
+									<?php }else{ ?>
+										<img src="<?= storage_url('avatar/' . $user->profile_photo); ?>"  width="50" class="profile-picture media-object" >
+									<?php } ?>	
+						        </a>
+						        <div class="media-body innerTB">
+						            <a href="#" class="text-white strong display-block">Julius Kencana</a>
+						            <a href="#" id="like" data-content="selfie" class="text-small text-white">
+						            	Like 
+						            </a>
+						            <a href="#" class="text-small text-white">
+						            	<span>(10)</span>
+						            </a>
+						        </div>
+						    </div>
+					    </div>
+					    <div>
+					        <a href="#"><img src="<?= assets_url('img/2.jpg'); ?>" alt="" class="img-outfit display-block-inline"></a>
+					    </div>
+					</div>
+					<div class="most-like">
+						<div class="bg-primary">
+							<div class="media margin-none">
+						        <a href="<?= base_url('social/selfie/' . $user->username) ?>" class="pull-left innerAll">
+									<?php if ($user->profile_photo == null){ ?>
+										<img src="<?= assets_url('img/avatar.jpg'); ?>" width="50" class="profile-picture media-object" >
+									<?php }else{ ?>
+										<img src="<?= storage_url('avatar/' . $user->profile_photo); ?>"  width="50" class="profile-picture media-object" >
+									<?php } ?>	
+						        </a>
+						        <div class="media-body innerTB">
+						            <a href="#" class="text-white strong display-block">Julius Kencana</a>
+						            <a href="#" id="like" data-content="selfie" class="text-small text-white">
+						            	Like 
+						            </a>
+						            <a href="#" class="text-small text-white">
+						            	<span>(10)</span>
+						            </a>
+						        </div>
+						    </div>
+					    </div>
+					    <div>
+					        <a href="#"><img src="<?= assets_url('img/2.jpg'); ?>" alt="" class="img-outfit display-block-inline"></a>
+					    </div>
+					</div>
+					<div class="most-like last-most-like">
+						<div class="bg-primary">
+							<div class="media margin-none">
+						        <a href="<?= base_url('social/selfie/' . $user->username) ?>" class="pull-left innerAll">
+									<?php if ($user->profile_photo == null){ ?>
+										<img src="<?= assets_url('img/avatar.jpg'); ?>" width="50" class="profile-picture media-object" >
+									<?php }else{ ?>
+										<img src="<?= storage_url('avatar/' . $user->profile_photo); ?>"  width="50" class="profile-picture media-object" >
+									<?php } ?>	
+						        </a>
+						        <div class="media-body innerTB">
+						            <a href="#" class="text-white strong display-block">Julius Kencana</a>
+						            <a href="#" id="like" data-content="selfie" class="text-small text-white">
+						            	Like 
+						            </a>
+						            <a href="#" class="text-small text-white">
+						            	<span>(10)</span>
+						            </a>
+						        </div>
+						    </div>
+					    </div>
+					    <div>
+					        <a href="#"><img src="<?= assets_url('img/2.jpg'); ?>" alt="" class="img-outfit display-block-inline"></a>
+					    </div>
+					</div>
+					<div class="most-like">
+						<div class="bg-primary">
+							<div class="media margin-none">
+						        <a href="<?= base_url('social/selfie/' . $user->username) ?>" class="pull-left innerAll">
+									<?php if ($user->profile_photo == null){ ?>
+										<img src="<?= assets_url('img/avatar.jpg'); ?>" width="50" class="profile-picture media-object" >
+									<?php }else{ ?>
+										<img src="<?= storage_url('avatar/' . $user->profile_photo); ?>"  width="50" class="profile-picture media-object" >
+									<?php } ?>	
+						        </a>
+						        <div class="media-body innerTB">
+						            <a href="#" class="text-white strong display-block">Julius Kencana</a>
+						            <a href="#" id="like" data-content="selfie" class="text-small text-white">
+						            	Like 
+						            </a>
+						            <a href="#" class="text-small text-white">
+						            	<span>(10)</span>
+						            </a>
+						        </div>
+						    </div>
+					    </div>
+					    <div>
+					        <a href="#"><img src="<?= assets_url('img/2.jpg'); ?>" alt="" class="img-outfit display-block-inline"></a>
+					    </div>
+					</div>
+				</div>
+			</div>
+	    </div>
+	    <div class="tab-pane" id="profile">
+	    	<div class="widget-body padding-none">
+				<div class="media border-bottom innerAll margin-none">
+					<div class="most-like last-most-like">
+						<div class="bg-primary">
+							<div class="media margin-none">
+						        <a href="<?= base_url('social/selfie/' . $user->username) ?>" class="pull-left innerAll">
+									<?php if ($user->profile_photo == null){ ?>
+										<img src="<?= assets_url('img/avatar.jpg'); ?>" width="50" class="profile-picture media-object" >
+									<?php }else{ ?>
+										<img src="<?= storage_url('avatar/' . $user->profile_photo); ?>"  width="50" class="profile-picture media-object" >
+									<?php } ?>	
+						        </a>
+						        <div class="media-body innerTB">
+						            <a href="#" class="text-white strong display-block">Julius Kencana</a>
+						            <a href="#" id="like" data-content="selfie" class="text-small text-white">
+						            	Like 
+						            </a>
+						            <a href="#" class="text-small text-white">
+						            	<span>(10)</span>
+						            </a>
+						        </div>
+						    </div>
+					    </div>
+					    <div>
+					        <a href="#"><img src="<?= assets_url('img/1.jpg'); ?>" alt="" class="img-outfit display-block-inline"></a>
+					    </div>
+					</div>
+					<div class="most-like last-most-like">
+						<div class="bg-primary">
+							<div class="media margin-none">
+						        <a href="<?= base_url('social/selfie/' . $user->username) ?>" class="pull-left innerAll">
+									<?php if ($user->profile_photo == null){ ?>
+										<img src="<?= assets_url('img/avatar.jpg'); ?>" width="50" class="profile-picture media-object" >
+									<?php }else{ ?>
+										<img src="<?= storage_url('avatar/' . $user->profile_photo); ?>"  width="50" class="profile-picture media-object" >
+									<?php } ?>	
+						        </a>
+						        <div class="media-body innerTB">
+						            <a href="#" class="text-white strong display-block">Julius Kencana</a>
+						            <a href="#" id="like" data-content="selfie" class="text-small text-white">
+						            	Like 
+						            </a>
+						            <a href="#" class="text-small text-white">
+						            	<span>(10)</span>
+						            </a>
+						        </div>
+						    </div>
+					    </div>
+					    <div>
+					        <a href="#"><img src="<?= assets_url('img/1.jpg'); ?>" alt="" class="img-outfit display-block-inline"></a>
+					    </div>
+					</div>
+					<div class="most-like">
+						<div class="bg-primary">
+							<div class="media margin-none">
+						        <a href="<?= base_url('social/selfie/' . $user->username) ?>" class="pull-left innerAll">
+									<?php if ($user->profile_photo == null){ ?>
+										<img src="<?= assets_url('img/avatar.jpg'); ?>" width="50" class="profile-picture media-object" >
+									<?php }else{ ?>
+										<img src="<?= storage_url('avatar/' . $user->profile_photo); ?>"  width="50" class="profile-picture media-object" >
+									<?php } ?>	
+						        </a>
+						        <div class="media-body innerTB">
+						            <a href="#" class="text-white strong display-block">Julius Kencana</a>
+						            <a href="#" id="like" data-content="selfie" class="text-small text-white">
+						            	Like 
+						            </a>
+						            <a href="#" class="text-small text-white">
+						            	<span>(10)</span>
+						            </a>
+						        </div>
+						    </div>
+					    </div>
+					    <div>
+					        <a href="#"><img src="<?= assets_url('img/1.jpg'); ?>" alt="" class="img-outfit display-block-inline"></a>
+					    </div>
+					</div>
+					<div class="most-like last-most-like">
+						<div class="bg-primary">
+							<div class="media margin-none">
+						        <a href="<?= base_url('social/selfie/' . $user->username) ?>" class="pull-left innerAll">
+									<?php if ($user->profile_photo == null){ ?>
+										<img src="<?= assets_url('img/avatar.jpg'); ?>" width="50" class="profile-picture media-object" >
+									<?php }else{ ?>
+										<img src="<?= storage_url('avatar/' . $user->profile_photo); ?>"  width="50" class="profile-picture media-object" >
+									<?php } ?>	
+						        </a>
+						        <div class="media-body innerTB">
+						            <a href="#" class="text-white strong display-block">Julius Kencana</a>
+						            <a href="#" id="like" data-content="selfie" class="text-small text-white">
+						            	Like 
+						            </a>
+						            <a href="#" class="text-small text-white">
+						            	<span>(10)</span>
+						            </a>
+						        </div>
+						    </div>
+					    </div>
+					    <div>
+					        <a href="#"><img src="<?= assets_url('img/1.jpg'); ?>" alt="" class="img-outfit display-block-inline"></a>
+					    </div>
+					</div>
+					<div class="most-like">
+						<div class="bg-primary">
+							<div class="media margin-none">
+						        <a href="<?= base_url('social/selfie/' . $user->username) ?>" class="pull-left innerAll">
+									<?php if ($user->profile_photo == null){ ?>
+										<img src="<?= assets_url('img/avatar.jpg'); ?>" width="50" class="profile-picture media-object" >
+									<?php }else{ ?>
+										<img src="<?= storage_url('avatar/' . $user->profile_photo); ?>"  width="50" class="profile-picture media-object" >
+									<?php } ?>	
+						        </a>
+						        <div class="media-body innerTB">
+						            <a href="#" class="text-white strong display-block">Julius Kencana</a>
+						            <a href="#" id="like" data-content="selfie" class="text-small text-white">
+						            	Like 
+						            </a>
+						            <a href="#" class="text-small text-white">
+						            	<span>(10)</span>
+						            </a>
+						        </div>
+						    </div>
+					    </div>
+					    <div>
+					        <a href="#"><img src="<?= assets_url('img/1.jpg'); ?>" alt="" class="img-outfit display-block-inline"></a>
+					    </div>
+					</div>
+				</div>
+			</div>
+	    </div>
+	</div>
+</div>

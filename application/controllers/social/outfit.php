@@ -11,7 +11,9 @@ class Outfit extends CI_Controller {
 		}
 
 		$this->load->model('user_model');
+		$this->load->model('like_model');
 		$this->load->model('ootd_model');
+		$this->load->model('comment_model');
     }
     
 	public function index($username)

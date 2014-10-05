@@ -11,7 +11,9 @@ class Selfie extends CI_Controller {
 		}
 
 		$this->load->model('user_model');
+		$this->load->model('like_model');
 		$this->load->model('selfie_model');
+		$this->load->model('comment_model');
     }
     
 	public function index($username)

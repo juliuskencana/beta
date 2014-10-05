@@ -1,4 +1,6 @@
-
+.border-right {
+border-right: 1px solid #efefef;
+}
 
 a img:hover {
 	opacity: .7;
@@ -203,7 +205,7 @@ a.text-inverse {
 }
 
 .text-white {
-	color: #fff;
+	color: #fff !important;
 }
 
 a:hover {
@@ -240,4 +242,9 @@ border-top: 1px solid #efefef;
 
 .label {
 display: inline-block;
+}
+
+
+.shadow-top{
+	box-shadow: 0px -3px 2px #cecece;
 }

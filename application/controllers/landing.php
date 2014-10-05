@@ -7,7 +7,7 @@ class Landing extends CI_Controller {
         parent::__construct();
 
 		if ($this->session->userdata('logged_in') == TRUE) {
-			redirect(base_url('social/news_feed/'.$this->session->userdata('username')));
+			redirect(base_url('social/feed/'.$this->session->userdata('username')));
 		}
 		
 		$this->load->model('user_model');
